@@ -1,6 +1,16 @@
 FROM danysk/manjaro-with-yay
 RUN yay -Syu --noconfirm
-RUN yay-install awesome-terminal-fonts lsb-release manjaro-zsh-config nerd-fonts-terminus ttf-meslo-nerd-font-powerlevel10k zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k-git
+RUN yay-install \
+awesome-terminal-fonts \
+lsb-release \
+manjaro-zsh-config \
+nerd-fonts-terminus \
+ttf-meslo-nerd-font-powerlevel10k \
+zsh zsh-autosuggestions \
+zsh-completions \
+zsh-history-substring-search \
+zsh-syntax-highlighting \
+zsh-theme-powerlevel10k
 COPY .zshrc /root/.zshrc
 COPY .zshrc /etc/skel/.zshrc
 COPY .p10k.zsh /root/.p10k.zsh
