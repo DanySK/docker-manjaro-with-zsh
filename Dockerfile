@@ -1,4 +1,4 @@
-FROM danysk/manjaro-with-yay:2021-08-25T1741422021-08-28_0039
+FROM danysk/manjaro-with-yay:40.20210830.1528
 RUN yay -Syu --noconfirm
 RUN yay-install \
 awesome-terminal-fonts \
