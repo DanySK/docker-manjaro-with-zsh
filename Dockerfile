@@ -1,4 +1,4 @@
-FROM danysk/docker-manjaro-linux-with-yay:175.20230806.0712
+FROM danysk/docker-manjaro-linux-with-yay:176.20230813.0619
 RUN yay -Syu --noconfirm
 RUN yay-install \
 awesome-terminal-fonts \
