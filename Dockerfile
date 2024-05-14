@@ -1,18 +1,18 @@
-FROM danysk/docker-manjaro-linux-with-yay:244.20240416.0751
-RUN yay -Syu --noconfirm
-RUN yay-install \
-awesome-terminal-fonts \
-lsb-release \
-manjaro-zsh-config \
-nerd-fonts-terminus \
-ttf-meslo-nerd-font-powerlevel10k \
-zsh zsh-autosuggestions \
-zsh-completions \
-zsh-history-substring-search \
-zsh-syntax-highlighting \
-zsh-theme-powerlevel10k
-COPY .zshrc /root/.zshrc
-COPY .zshrc /etc/skel/.zshrc
-COPY .p10k.zsh /root/.p10k.zsh
-COPY .p10k.zsh /etc/skel/.p10k.zsh
-CMD zsh
+FROM danysk/docker-manjaro-pamac:20240514.20240509
+RUN pamac update --no-confirm
+RUN pamac upgrade --no-confirm
+RUN pamac install awesome-terminal-fonts\
+    lsb-release\
+    manjaro-zsh-config\
+    ttf-meslo-nerd-font-powerlevel10k\
+    zsh\
+    zsh-autosuggestions\
+    zsh-completions\
+    zsh-history-substring-search\
+    zsh-syntax-highlighting\
+    zsh-theme-powerlevel10k\
+    --no-confirm
+RUN paccache -rk 0
+RUN pamac clean -b
+RUN cp -r /etc/skel /root
+ENTRYPOINT [ "/bin/zsh" ]
