@@ -1,4 +1,4 @@
-FROM danysk/docker-manjaro-pamac:20240911.20240908
+FROM danysk/docker-manjaro-pamac:20240918.20240915
 RUN pamac update --no-confirm
 RUN pamac upgrade --no-confirm
 RUN pamac install awesome-terminal-fonts\
