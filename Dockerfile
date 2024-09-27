@@ -3,6 +3,7 @@ RUN pamac update --no-confirm
 RUN pamac upgrade --no-confirm
 RUN pamac install awesome-terminal-fonts\
     lsb-release\
+    manjaro-base-skel\
     manjaro-zsh-config\
     ttf-meslo-nerd-font-powerlevel10k\
     zsh\
