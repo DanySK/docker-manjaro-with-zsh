@@ -5,6 +5,7 @@ RUN pamac install awesome-terminal-fonts\
     lsb-release\
     manjaro-base-skel\
     manjaro-zsh-config\
+    oh-my-zsh-git\
     ttf-meslo-nerd-font-powerlevel10k\
     zsh\
     zsh-autosuggestions\
