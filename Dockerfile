@@ -1,7 +1,7 @@
-FROM danysk/manjaro-pamac:20240927.20240922
-RUN pamac update --no-confirm
-RUN pamac upgrade --no-confirm
-RUN pamac install awesome-terminal-fonts\
+FROM danysk/manjaro-paru:20241001.20240926
+USER build
+RUN paru -Sy\
+    awesome-terminal-fonts\
     lsb-release\
     manjaro-base-skel\
     manjaro-zsh-config\
@@ -13,8 +13,9 @@ RUN pamac install awesome-terminal-fonts\
     zsh-history-substring-search\
     zsh-syntax-highlighting\
     zsh-theme-powerlevel10k\
-    --no-confirm
+    --noconfirm
+USER root
 RUN paccache -rk 0
-RUN pamac clean -b
 RUN cp -r /etc/skel /root
+RUN cp -r /etc/skel /home/build
 ENTRYPOINT [ "/bin/zsh" ]
