@@ -14,6 +14,7 @@ RUN paru -Sy\
     zsh-syntax-highlighting\
     zsh-theme-powerlevel10k\
     --noconfirm
+RUN paru -Sccd --noconfirm
 USER root
 RUN paccache -rk 0
 RUN cp -r /etc/skel /root
