@@ -1,4 +1,4 @@
-FROM danysk/manjaro-paru:20241023.20241020
+FROM danysk/manjaro-paru:20241027.20241024
 USER build
 RUN paru -Sy\
     awesome-terminal-fonts\
