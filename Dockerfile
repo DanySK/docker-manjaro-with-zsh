@@ -7,6 +7,7 @@ RUN paru -Sy\
     --noconfirm
 RUN paru -Sy\
     awesome-terminal-fonts\
+    libxml2\
     lsb-release\
     manjaro-base-skel\
     manjaro-zsh-config\
