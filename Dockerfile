@@ -1,4 +1,4 @@
-FROM danysk/manjaro-paru:20250507.20250504
+FROM danysk/manjaro-paru:20250729.20250504
 USER build
 RUN paru -Sy\
     archlinux-keyring\
