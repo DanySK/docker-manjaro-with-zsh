@@ -1,6 +1,11 @@
 FROM danysk/manjaro-paru:20250507.20250504
 USER build
 RUN paru -Sy\
+    archlinux-keyring\
+    chaotic-keyring\
+    manjaro-keyring\
+    --noconfirm
+RUN paru -Sy\
     awesome-terminal-fonts\
     lsb-release\
     manjaro-base-skel\
