@@ -22,6 +22,7 @@ RUN paru -Sy\
     --noconfirm
 RUN paru -Sccd --noconfirm
 USER root
+RUN chsh /bin/zsh
 RUN paccache -rk 0
 RUN cp -r /etc/skel /root
 RUN cp -r /etc/skel /home/build
